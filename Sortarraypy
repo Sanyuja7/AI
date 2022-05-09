@@ -1,10 +1,20 @@
+# Selection sort program in Python
+
 def selection_sort(array, size):
+   
     for step in range(size):
         min_index = step
+
         for i in range(step + 1, size):
+
+            # select the minimum element in each loop
             if array[i] < array[min_index]:
                 min_index = i
+         
+        # put min at the correct position
         (array[step], array[min_index]) = (array[min_index], array[step])
+
+
 data = [-12,3,45,26,-11,-4,53]
 size = len(data)
 selection_sort(data, size)
